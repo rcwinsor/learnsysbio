@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Learn Systems Biology by Yong-Jun Shin (csml.uconn.edu), 2016
-     Module 9: Parameter Estimation using an Adaptive Filter -->
+     Module 9: Parameter Estimation using an Adaptive Filter 
+     Modified by Rachel Winsor for Assignment 2-->
 
     <head>
         <meta name="description" content="Learn Systems Biology, Introduction to Systems Biology">
@@ -80,7 +81,7 @@
         <!-- Title -->
         <div id = "header" class="container">
             <h3><b> Module 9: Parameter Estimation using an Adaptive Filter</b></h3>
-            <h4>Learn Systems Biology <font color="#a9a9a9"> by UCONN CSMLab </font> <a href="http://csml.uconn.edu"><i class="glyphicon glyphicon-home w3-medium"></i></a></h4>
+            <h4>UCONN BioMEMs Course <font color="#a9a9a9"> BME6086 </font> </a></h4>
         </div>
 
         <!-- Navigation -->
@@ -120,12 +121,9 @@
     pXY = 0.4;                // production parameter
     pY = 0.8;                 // degradation/dilution parameter
 
-    // fake data generation
-    for (n = 1; n < N; n++)   // N-1 loops (1 loop = 1 min)
-    {
-        x[n] = X + 2*random.Gaussian();
-        y[n] = pXY*x[n-1] + pY*y[n-1] + 2*random.Gaussian();
-    }
+    // we replace fake data generation with info from our assignment
+    x = [ ];
+    y = [ ];
 
     // adaptive parameter estimation (Least Mean Squares (LMS) method)
     est_pXY = new Array(N);   // estimated production parameter set
